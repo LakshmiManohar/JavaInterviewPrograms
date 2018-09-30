@@ -1,0 +1,74 @@
+import java.util.Arrays;
+public class RemoveArrayDuplicates {
+	
+	static int remove ;
+	static int arr [] = {1,5,7,5,9,100,99,102,66,656,32,102,3,3};
+	static int a[];
+	static int ele;
+	static int count=0;
+	
+
+	public static void main(String[] args) {
+		
+		System.out.println("Intial Array: "+Arrays.toString(arr));
+		// TODO Auto-generated method stub
+		for(int i=0;i<arr.length;i++){
+			
+			for(int j=i;j<arr.length;j++){
+				
+				if(i!=j){
+					
+					if(arr[i]==arr[j]){
+						remove = j;
+						//System.out.println(remove+" "+arr[j]);
+						if(remove+1!=arr.length){
+							
+							arr[remove] =arr[arr.length-1];
+							 ele = arr[remove];	
+							 							 
+						}
+						
+					}
+				}
+			}
+		}
+		ArrayDelete.shitNode();
+		//System.out.println(Arrays.toString(arr));
+		//System.out.println(ele);
+		//System.out.println(arr.length);
+		//System.out.println(count);
+		System.out.println("Final Array: "+Arrays.toString(a));
+	}
+	
+	static void shitNode(){
+		
+		for(int i=0;i<arr.length;i++){
+			
+			if(arr[i]==ele)
+			{
+				continue;
+			}
+			count++;
+	}
+		
+		int arrLength = count+1;
+		a = new int[arrLength];
+		
+		int counter =0;
+		for(int j=0;j<arr.length;j++){
+		
+			if(arr[j]!=ele){
+				
+				a[counter] = arr[j];
+				counter++;
+				
+			}
+		}
+		a[a.length-1] = ele;
+		
+		
+		
+		}
+
+	
+}
